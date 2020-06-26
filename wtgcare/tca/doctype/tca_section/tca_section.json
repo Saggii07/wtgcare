@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "field:section_name",
+ "creation": "2019-12-02 14:49:28.954753",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wtg_model",
+  "wtg_section",
+  "section_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "wtg_model",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WTG Model",
+   "options": "WTG Model"
+  },
+  {
+   "fieldname": "wtg_section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WTG Section",
+   "options": "WTG Section"
+  },
+  {
+   "fieldname": "section_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Section Name",
+   "unique": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-04-28 18:43:35.771996",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA Section",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "TCA User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "TCA Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TCA Manager",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "wtg_model",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

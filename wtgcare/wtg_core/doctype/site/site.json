@@ -1,0 +1,137 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:site_name",
+ "creation": "2019-11-23 22:36:32.204577",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "site_code",
+  "site_group",
+  "site_incharge",
+  "default_warehouse",
+  "faulty_warehouse",
+  "column_break_5",
+  "site_name",
+  "state",
+  "customer",
+  "area"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "\nRajasthan\nMadhya Pradesh\nMaharashtra\nUttar Pradesh\nGujarat\nKarnataka\nAndhra Pradesh\nTamil Nadu\nUttarakhand"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Link",
+   "label": "Area",
+   "options": "Area"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Site Configuration"
+  },
+  {
+   "fieldname": "site_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Code"
+  },
+  {
+   "fieldname": "site_group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Group"
+  },
+  {
+   "fieldname": "site_incharge",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site Incharge",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "faulty_warehouse",
+   "fieldtype": "Link",
+   "label": "Faulty Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer Master"
+  }
+ ],
+ "modified": "2020-05-20 10:57:56.550690",
+ "modified_by": "Administrator",
+ "module": "WTG Core",
+ "name": "Site",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Operator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "site_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "wtg_name.-.tca_schedule.-.#",
+ "creation": "2020-04-25 11:11:06.825208",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tca_schedule",
+  "tca__activity_team",
+  "column_break_3",
+  "turbine_image",
+  "section_break_3",
+  "wtg_name",
+  "uin_no",
+  "latitude",
+  "schedule_date",
+  "ambient_temperature",
+  "wtg_kwh",
+  "tca_report_name",
+  "isactive",
+  "column_break_8",
+  "wtg_model",
+  "date_of_commissioning",
+  "longitude",
+  "audit_date",
+  "wind_speed",
+  "wtg_hrs",
+  "reference_number",
+  "iscompleted",
+  "section_break_13",
+  "recommendation"
+ ],
+ "fields": [
+  {
+   "fieldname": "tca_schedule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "TCA Schedule",
+   "options": "TCA Schedule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "wtg_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WTG Name"
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Schedule Date"
+  },
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Audit Date"
+  },
+  {
+   "default": "Visual Impressions Technical Health Check Report",
+   "fieldname": "tca_report_name",
+   "fieldtype": "Data",
+   "label": "TCA Report Name"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Recommendation"
+  },
+  {
+   "default": "0",
+   "fieldname": "isactive",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "isActive"
+  },
+  {
+   "default": "0",
+   "fieldname": "iscompleted",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "isCompleted"
+  },
+  {
+   "fieldname": "wtg_model",
+   "fieldtype": "Link",
+   "label": "WTG Model",
+   "options": "WTG Model"
+  },
+  {
+   "fieldname": "tca__activity_team",
+   "fieldtype": "Table MultiSelect",
+   "label": "TCA  Activity Team",
+   "options": "TCA Team Table"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "uin_no",
+   "fieldtype": "Data",
+   "label": "UIN No"
+  },
+  {
+   "fieldname": "ambient_temperature",
+   "fieldtype": "Data",
+   "label": "Ambient Temperature"
+  },
+  {
+   "fieldname": "date_of_commissioning",
+   "fieldtype": "Date",
+   "label": "Date of Commissioning"
+  },
+  {
+   "fieldname": "wind_speed",
+   "fieldtype": "Data",
+   "label": "Wind Speed"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "wtg_kwh",
+   "fieldtype": "Data",
+   "label": "WTG KWH"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "wtg_hrs",
+   "fieldtype": "Data",
+   "label": "WTG HRS"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "turbine_image",
+   "fieldtype": "Attach Image",
+   "in_preview": 1,
+   "label": "Turbine image"
+  }
+ ],
+ "links": [],
+ "modified": "2020-05-16 12:26:47.802085",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Operator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "wtg_name,tca_schedule",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "wtg_name",
+ "track_changes": 1
+}

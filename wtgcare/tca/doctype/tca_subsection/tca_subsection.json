@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "autoname": "field:subsection_name",
+ "creation": "2019-12-02 15:08:02.333638",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tca_section",
+  "wtg_subsection",
+  "subsection_name",
+  "wtg_model"
+ ],
+ "fields": [
+  {
+   "fieldname": "tca_section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TCA Section",
+   "options": "TCA Section"
+  },
+  {
+   "fieldname": "wtg_subsection",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WTG Subsection",
+   "options": "WTG Subsection"
+  },
+  {
+   "fieldname": "subsection_name",
+   "fieldtype": "Read Only",
+   "label": "Subsection Name",
+   "unique": 1
+  },
+  {
+   "fetch_from": "tca_section.wtg_model",
+   "fieldname": "wtg_model",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "WTG Model"
+  }
+ ],
+ "links": [],
+ "modified": "2020-05-09 13:26:16.783883",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA Subsection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "TCA User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "TCA Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TCA Manager",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

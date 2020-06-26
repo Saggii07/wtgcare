@@ -1,0 +1,183 @@
+{
+ "autoname": "PM-.pm_check_point.-.pm_activity.-.##",
+ "creation": "2019-12-03 11:02:29.873774",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pm_activity",
+  "column_break_3",
+  "pm_check_point",
+  "section_break_4",
+  "observations",
+  "section_break_6",
+  "pending_due_on",
+  "column_break_8",
+  "priority",
+  "section_break_10",
+  "material_details",
+  "section_break_7",
+  "status",
+  "series_name",
+  "column_break_10",
+  "performed_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Activity",
+   "options": "PM Activity"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pm_check_point",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Check Point",
+   "options": "PM Check Point"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Immediate\nNext PM"
+  },
+  {
+   "collapsible_depends_on": "eval: doc.pending_due_on ==='Material'",
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nCompleted"
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Observations"
+  },
+  {
+   "fieldname": "series_name",
+   "fieldtype": "Read Only",
+   "label": "Series Name"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performed By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "pending_due_on",
+   "fieldtype": "Select",
+   "label": "Pending due to",
+   "options": "Material\nMen\nRow\nGrid\nEnvironmental\nOther"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.pending_due_on ==='Material'\n\n",
+   "fieldname": "material_details",
+   "fieldtype": "Table",
+   "label": "Material Details",
+   "options": "PM Work Remaining List Table"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2020-02-13 19:13:18.167267",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Work Remaining List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PM Lead",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Area Incharge",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FAPO",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

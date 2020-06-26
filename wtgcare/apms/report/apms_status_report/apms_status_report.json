@@ -1,0 +1,35 @@
+{
+ "add_total_row": 0,
+ "creation": "2020-06-24 10:25:51.087994",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "General Letterhead",
+ "modified": "2020-06-24 11:23:32.701442",
+ "modified_by": "Administrator",
+ "module": "apms",
+ "name": "APMS Status Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "Select name  as \"Service Order no:Data:150\" ,date as \"Date:Data:100\",site_name as \"Site Name:Data:200\",service_nature as \"Type of order:Data:100\",service_status as \"Service Status:Data:240\" from `tabService Report`  \nwhere date >=%(start_date)s and date<=%(end_date)s\n\n ",
+ "ref_doctype": "Service Report",
+ "report_name": "APMS Status Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "APMS Admin"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Site Material Incharge"
+  }
+ ]
+}

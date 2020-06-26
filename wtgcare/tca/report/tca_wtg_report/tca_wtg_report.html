@@ -1,0 +1,381 @@
+
+<!--<table width="100%" style="text-align: center;" border="1">
+
+<tbody>
+
+  <tr>
+
+ <td rowspan="2"><img src="/a.png" style="width: 134.854px; height: 134.854px;"></td>
+
+ <td rowspan="2"><h5>Visual Impressions Technical&nbsp;</h5>
+
+<h5>Health Check Report</h5>
+
+</td>
+
+<td><h5>Report Ref. No.: <br>VI.THC 190525.1</h5>
+
+</td>
+
+ </tr>
+
+<tr>
+
+      <td><h5>INOX ROJMAL-RJAT-141</h5>
+
+</td>
+
+  </tr>
+
+  </tbody>
+
+</table>-->
+<!--<h4 class="text-center">
+	{% if (filters.tca_activity) { %}
+		{%= filters.tca_activity %}
+	{% } %}
+</h4>-->
+<style>
+    .other-pages{
+        page-break-before: always;
+      }
+</style>
+
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>Date of Audit</th>
+			<td align="right">{%= frappe.datetime.str_to_user(data[0][__("Creation")])%}</td>
+		</tr>
+</tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+                        <th rowspan="2">WTG Location</th>
+			<th>Equipment</th>
+			<th>State</th>
+			<th>Site</th>
+			<th>UIN NO</th>
+			<th>Date of Commissioning</th>
+		</tr>
+<tr>
+			<td>{%= data[0][__("WTG Name")]%}</td>
+			<td>{%= data[0][__("State")]%}</td>
+			<td>{%= data[0][__("Site Name")]%}</td>
+			<td>--</td>
+			<td>--</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+                        <th rowspan="2">WTG Details</th>
+			<th>Model</th>
+			<th>MW Capacity</th>
+			<th>Rotor/Blade</th>
+			<th>Technology</th>
+			<th>Tower Type</th>
+                        <th>Hub Height</th>
+		</tr>
+<tr>
+			<td>{%= data[0][__("WTG Model")]%}</td>
+			<td>2.0 MW</td>
+			<td>Inox</td>
+			<td>AMSC Tech</td>
+			<td>Tubular</td>
+                        <td>92 Mtr</td>
+</tr>
+
+</tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>Asset Owner</th>
+			<td></td>
+			<th>Coordinates</th>
+                        <td>-</td>
+                        <td>-</td>
+		</tr>
+        </tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>WTG KWH</th>
+			<td>-</td>
+			<th>WTG HRS</th>
+                        <td>-</td>
+		</tr>
+        </tbody>
+</table>
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>Ambient</th>
+			<td>Temp</td>
+			<td>39˚C </td>
+                        <td>Wind</td>
+                        <td>5.0 m/s</td>
+		</tr>
+        </tbody>
+</table>
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th rowspan="10" width="50%"><br/>Scope:<br/>
+Provide Visual Impressions as Technical Condition
+Audit samples that cover WTG Tower, Nacelle
+including all integrated controllers, rotor, control
+panel/s, transformer & WTG civil work periphery.
+<br/>
+Objective:<br/>
+The purpose of audit is to gauge overall operational
+health status of the turbines with special emphasis on
+turbine’s technical condition, and the aspects affecting
+safety & longevity of said turbines.<br/><br/></th>
+			<td rowspan="10">
+
+
+{% for(var i=0, l=data.length; i < l; i++) { %}
+
+{% if data[i][__("WTG Check Point")] == "WTG Tower Image" %}
+<img src="{{ data[i][__("Turbine Image")]}}" style="width: 100%;">
+{% endif %}
+{% } %}
+
+
+</td>
+		</tr>
+        </tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>Observations under this Audit report are classified to indicate Severity and Attributable cause</th>
+		</tr>
+        </tbody>
+</table>
+<div class="row other-pages"></div>
+<table class="table table-bordered">
+	<tbody>
+		<tr align="center">
+			<td colspan="2" width="49%"><strong>Severity</strong></td>
+                        <td width="2%" rowspan="5"></td>
+                        <td colspan="2"  width="49%"><strong>Attributable cause</strong></td>
+		</tr>
+		<tr>
+			<td width="40%">Unsafe operation affecting WTG/operating
+Personnel. Requires immediate stop till
+Repair are undertaken.</td>
+                        <td width="9%"><font color="red">Critical</font></td>  
+                        <td width="42%">Workmanship & Lack of Awareness</td>
+                        <td width="7%">WA</td>
+		</tr>
+<tr>
+			<td>May affect safe operation of WTG /
+operating personnel, Requires repair / attention</td>
+                        <td><font color="orange">Significant</font></td> 
+                        <td>Previous pendency</td>
+                        <td>PP</td>
+		</tr>
+<tr>
+			<td>Not affecting safe operation of WTG, Functionality
+may be paralysed, Repair work can be done in next
+maintenance</td>
+                        <td><font color="yellow">Moderate</font></td> 
+                        <td>Material defect or Process deficiency</td>
+                        <td>MP</td>
+		</tr>
+<tr>
+			<td>No direct impact on WTG safety and functionality</td>
+                        <td><font color="green">Acceptable</font></td> 
+                        <td>Design or Reliability</td>
+                        <td>DR</td>
+		</tr>
+        </tbody>
+</table>
+
+<div class="row other-pages"></div>
+<h2>Visual Inspection Details</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th><strong>WTG Part</strong></th>
+			<th><strong>Check Code</strong></th>
+			<th><strong>Observation</strong></th>
+                        <th><strong>Severity</strong></th>
+                        <th><strong>A’ble cause</strong></th>
+                        <th><strong>Pictorial number</strong></th>
+		</tr>
+{% for(var i=0, l=data.length; i < l; i++) { %}
+<tr>
+<td> {%= data[i][__("Section Name")]%} </td>
+<td> {%= data[i][__("WTG Check Point")]%} </td>
+<td>{%= data[i][__("Comentory")]%}</td> 
+<td> {%= data[i][__("Severity")]%} </td>   
+<td> {%= data[i][__("Attributable Cause")]%} </td>
+<td> {%= data[i][__("Upload Image")]%} </td>
+</tr>
+{% } %}
+</thead>
+<tbody>
+
+        </tbody>
+</table>
+
+
+
+
+
+
+
+<h2>Visual Inspection Conclusion / Recommendation:</h2>
+<p>The summarisation of collective technical observations of various sections of turbines made in the audit is as
+follows.</p>
+<table class="table table-bordered">
+	<tbody>
+		<tr>    <th>Sr. No</th>
+			<th><strong>Technical Observations - Severity</strong></th>
+			<th><strong>Count</strong></th>
+			<th><strong>Percentage (%)</strong></th>
+		</tr>
+<tr>
+<td>1</td>
+<td>Critical category</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Significant category</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Moderate category</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Acceptable category</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Total</td>
+<td></td>
+<td></td>
+</tr>
+        </tbody>
+</table>
+
+<h5>Based on the above technical diligence it is understood that; Critical & Significant observations together have a
+magnitude of 39% among the total observations, and that they are affecting Safety & Functionality of the turbine.</h5><br/>
+<h5>The categorization based on ‘Attributable cause’ of all the above observation are as follows:</h5>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>    <th>Sr. No</th>
+			<th><strong>Technical Observations – Attributable Cause</strong></th>
+			<th><strong>Count</strong></th>
+			<th><strong>Percentage (%)</strong></th>
+		</tr>
+<tr>
+<td>1</td>
+<td>Workmanship & Lack of Awareness</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Material Shortage & Process deficiency</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Previous Pendency</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Design or Reliability</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Total</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>It is observed that 25% of the observations are only because of non-availability of materials & 69% are because of
+lack of awareness & workmanship.</p>
+
+<div class="row other-pages"></div>
+
+<h3>Recommendation:</h3>
+
+<p>
+1. As most of the observations are affecting Safety &Technical Health of the turbine; it is recommended to
+undertake ‘Extraordinary Preventive / Curative Maintenance’ and ensure resolution of all Critical &
+Significant observations across the entire fleet of turbines at the wind park.</p>
+<p>
+2. Education / booster capsules for the O&M operating personnel is a must to ensure a good clutch on future
+maintenance and upkeep of the wind park.</p>
+
+<h3>Pictorial References</h3>
+
+<table class="table table-bordered" width="100%">
+	<tbody>
+
+{% for(var i=0, l=data.length; i < l; i++) { %}
+
+{% if data[i][__("Upload Image")] %}
+<tr>
+<td width="40%"> <img src="{{ data[i][__("Upload Image")]}}" width="20%"> </td>
+<td width="20%"> {%= data[i][__("Upload Image")]%} </td>
+<td width="40%"> {%= data[i][__("Comentory")]%} </td>
+</tr>
+{% endif %}
+
+
+{% } %}
+
+
+
+        </tbody>
+</table>
+<div>
+<div class="row other-pages"></div>
+    <div id="footer-html" class="visible-pdf">
+       
+        <div class="letter-head-footer">
+        </div>
+
+        <p class="text-center small page-number visible-pdf">
+           Visual Impressions – THC Report:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="page"></span>', '<span class="topage"></span>')
+        </p>
+    </div>
+
+
+

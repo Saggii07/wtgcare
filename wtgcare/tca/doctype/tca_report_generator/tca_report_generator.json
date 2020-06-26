@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "autoname": "field:tca_report_name",
+ "creation": "2019-12-02 15:05:12.593948",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tca_activity",
+  "wtg_name",
+  "audit_date",
+  "recommendation",
+  "tca_report_name",
+  "reference_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "tca_activity",
+   "fieldtype": "Link",
+   "label": "TCA Activity",
+   "options": "TCA Activity"
+  },
+  {
+   "fieldname": "wtg_name",
+   "fieldtype": "Link",
+   "label": "WTG Name",
+   "options": "TCA Master"
+  },
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Recommendation"
+  },
+  {
+   "fieldname": "tca_report_name",
+   "fieldtype": "Read Only",
+   "label": "TCA Report Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Read Only",
+   "label": "Reference Number "
+  }
+ ],
+ "links": [],
+ "modified": "2020-04-23 11:29:58.324698",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA Report Generator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "TCA User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "TCA Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TCA Manager",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

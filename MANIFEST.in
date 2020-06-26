@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include wtgcare *.css
+recursive-include wtgcare *.csv
+recursive-include wtgcare *.html
+recursive-include wtgcare *.ico
+recursive-include wtgcare *.js
+recursive-include wtgcare *.json
+recursive-include wtgcare *.md
+recursive-include wtgcare *.png
+recursive-include wtgcare *.py
+recursive-include wtgcare *.svg
+recursive-include wtgcare *.txt
+recursive-exclude wtgcare *.pyc

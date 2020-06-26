@@ -1,0 +1,49 @@
+{
+ "cards": [
+  {
+   "links": "[\n    \n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"name\": \"TCA Schedule\",\n\t\t\t\t\t\"description\":\"TCA Schedule\",\n\t\t\t\t\t\"onboard\": 1\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"name\": \"TCA Activity\",\n\t\t\t\t\t\"description\":\"TCA Activity.\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"TCA List Table\"]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\":\"TCA Data Entry\",\n\t\t\t\t\t\"name\": \"TCA Data\",\n\t\t\t\t\t\"description\": \"TCA Data\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"TCA Activity\"]\n\t\t\t\t}\n\t\t\t]",
+   "title": "Transactions"
+  },
+  {
+   "links": "[\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"report\",\n\t\t\t\t\t\"is_query_report\": true,\n\t\t\t\t\t\"name\": \"TCA Data\",\n\t\t\t\t\t\"doctype\": \"TCA Data\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"WTG Check Point\"]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"report\",\n\t\t\t\t\t\"is_query_report\": true,\n\t\t\t\t\t\"name\": \"TCA DATA-Impact Category\",\n\t\t\t\t\t\"doctype\": \"TCA Data\",\n\t\t\t\t\t\"onboard\": 1\n\t\t\t\t},\n                                {\n\t\t\t\t\t\"type\": \"report\",\n\t\t\t\t\t\"is_query_report\": true,\n\t\t\t\t\t\"name\": \"TCA DATA-Issue Category\",\n\t\t\t\t\t\"doctype\": \"TCA Data\",\n\t\t\t\t\t\"onboard\": 1\n\t\t\t\t}\n\t\t\t]",
+   "title": "Reports"
+  },
+  {
+   "links": "[\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"TCA Check Point\",\n\t\t\t\t\t\"name\": \"TCA Check Point\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"TCA Check Point.\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"TCA Section\"]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"TCA Section\",\n\t\t\t\t\t\"name\": \"TCA Section\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"TCA Section.\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"WTG Model\"]\n\t\t\t\t},\n                                {\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"TCA Subsection\",\n\t\t\t\t\t\"name\": \"TCA Subsection\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"TCA Subsection.\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"WTG Subsection\"]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"WTG Check Point\",\n\t\t\t\t\t\"name\": \"WTG Check Point\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"WTG Check Point.\",\n\t\t\t\t\t\"onboard\": 1,\n                    \"dependencies\": [\"TCA Check Point\"]\n\t\t\t\t},\n                                \t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"WTG Section\",\n\t\t\t\t\t\"name\": \"WTG Section\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"WTG Section.\",\n\t\t\t\t\t\"onboard\": 1\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"label\": \"WTG Subsection\",\n\t\t\t\t\t\"name\": \"WTG Subsection\",\n\t\t\t\t\t\"icon\": \"fa fa-sitemap\",\n\t\t\t\t\t\"description\": \"WTG Subsection.\",\n\t\t\t\t\t\"onboard\": 1\n\t\t\t\t}\n                            \n\t\t\t]",
+   "title": "Settings"
+  },
+  {
+   "links": "[\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"page\",\n\t\t\t\t\t\"name\": \"tca-dashboard\",\n\t\t\t\t\t\"label\":\"TCA Dashboard\"\n\t\t\t\t}\n                \n        ]\n                        \n                        \n                        \n                        \n                        \n                        ",
+   "title": "Dashboard"
+  }
+ ],
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-03-14 10:39:11.179270",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "idx": 0,
+ "label": "TCA",
+ "modified": "2020-04-28 12:59:43.170043",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "is_query_report": 0,
+   "link_to": "TCA Activity",
+   "type": "DocType"
+  },
+  {
+   "color": "#c5ec63",
+   "is_query_report": 0,
+   "link_to": "TCA Data",
+   "type": "DocType"
+  }
+ ]
+}

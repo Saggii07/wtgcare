@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2020-05-15 15:02:07.577039",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "PM Schedule",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear Team,\nPraventive Maintenance of {{doc.site_name}} is going to start w.e.f. , kindly plan for materials on priority",
+ "modified": "2020-05-15 15:02:07.577039",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Schedule Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "cc": "swapnil.patil@powercon.in"
+  }
+ ],
+ "sender": "Notifications",
+ "sender_email": "techsupport@powerteam.in",
+ "subject": "Plan for Maintenance Material  -  {{ doc.pm_type }} {{doc.pm_periodicity}}"
+}

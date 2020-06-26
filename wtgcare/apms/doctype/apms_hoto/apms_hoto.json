@@ -1,0 +1,211 @@
+{
+ "autoname": "APMS-HOTO-.######",
+ "creation": "2019-12-02 13:39:19.112849",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "handover_type",
+  "site_name",
+  "column_break_2",
+  "shift",
+  "site_code",
+  "section_break_5",
+  "handover_from",
+  "handover_by",
+  "handover_date",
+  "column_break_9",
+  "handover_to",
+  "takeover_to",
+  "takeover_date",
+  "handover_status",
+  "section_break_15",
+  "wtg_list",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "handover_type",
+   "fieldtype": "Select",
+   "label": "Handover Type",
+   "options": "-- Select --\nCentral to Central\nCentral to Site\nSite to Central\nSite to Site",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:in_list([\"Central to Central\"],doc.handover_type)",
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shift",
+   "options": "\nS1\nS2\nS3"
+  },
+  {
+   "depends_on": "eval:in_list([\"Central to Site\",\"Site to Site\"],doc.handover_type)",
+   "fieldname": "site_code",
+   "fieldtype": "Link",
+   "label": "Site Code",
+   "options": "Site",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "handover_from",
+   "fieldtype": "Link",
+   "label": "Handover From",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "handover_from.employee_name",
+   "fieldname": "handover_by",
+   "fieldtype": "Read Only",
+   "label": "Handover By"
+  },
+  {
+   "fieldname": "handover_date",
+   "fieldtype": "Datetime",
+   "label": "Handover Date",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:in_list([\"Central to Site\",\"Site to Site\"],doc.handover_type)",
+   "fetch_from": "site_code.site_name",
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "label": "Site Name",
+   "read_only": 1
+  },
+  {
+   "default": "--SELECT--",
+   "depends_on": "handover_from",
+   "fieldname": "handover_to",
+   "fieldtype": "Link",
+   "label": "Handover To",
+   "options": "Employee",
+   "set_only_once": 1
+  },
+  {
+   "default": "Null",
+   "depends_on": "handover_from",
+   "fetch_from": "handover_to.employee_name",
+   "fieldname": "takeover_to",
+   "fieldtype": "Read Only",
+   "label": "Takeover To"
+  },
+  {
+   "fieldname": "takeover_date",
+   "fieldtype": "Datetime",
+   "label": "Takeover Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "handover_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Handover Status",
+   "options": "0\n1",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wtg_list",
+   "fieldtype": "Table",
+   "label": "WTG List",
+   "options": "APMS WTG Table"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark"
+  }
+ ],
+ "modified": "2019-12-30 17:52:56.408621",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "APMS HOTO",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "APMS Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Operator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

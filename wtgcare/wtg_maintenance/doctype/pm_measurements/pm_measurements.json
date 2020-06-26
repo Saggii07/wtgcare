@@ -1,0 +1,127 @@
+{
+ "autoname": "field:measurement_name",
+ "creation": "2019-12-23 15:58:40.416714",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "measurement_name",
+  "measurement_group",
+  "measurement_unit",
+  "column_break_4",
+  "pm_type",
+  "wtg_technology",
+  "wtg_model",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "measurement_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "pm_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PM Type",
+   "options": "Mechanical\nElectrical"
+  },
+  {
+   "fieldname": "measurement_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Measurement Unit",
+   "options": "UOM",
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "measurement_group",
+   "fieldtype": "Select",
+   "label": "Measurement Group",
+   "options": "Common\nTechnology\nWTG Model"
+  },
+  {
+   "depends_on": "eval:in_list([\"Technology\"],doc.measurement_group)",
+   "fieldname": "wtg_technology",
+   "fieldtype": "Select",
+   "label": "WTG Technology",
+   "options": "Enercon\nInox"
+  },
+  {
+   "depends_on": "eval:in_list([\"WTG Model\"],doc.measurement_group)",
+   "fieldname": "wtg_model",
+   "fieldtype": "Select",
+   "label": "WTG Model",
+   "options": "E40\nE48\nE53"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "modified": "2019-12-23 16:24:10.621101",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM measurements",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

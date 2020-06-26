@@ -1,0 +1,448 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2019-12-02 12:21:53.301956",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_report_section",
+  "naming_series",
+  "service_log_no",
+  "ptw_no",
+  "column_break_4",
+  "date",
+  "ptw_date",
+  "column_break_6",
+  "issued_by",
+  "ptw_issued_by",
+  "section_break_8",
+  "asset_type",
+  "customer_name",
+  "cluster_name",
+  "service_status",
+  "column_break_14",
+  "wtg_name",
+  "site",
+  "site_name",
+  "feeder_name",
+  "pss_name",
+  "task_lead_by",
+  "issued_name",
+  "column_break_21",
+  "service_nature",
+  "wtg_no",
+  "task_review_by",
+  "ptw_issued_name",
+  "section_break_25",
+  "turbine_operational_status_details",
+  "fault_status",
+  "pm_activity",
+  "turbine_operational_status",
+  "fault_status_details",
+  "section_break_44",
+  "task_handled_by",
+  "material_consumtion",
+  "material__consumtion",
+  "section_break_34",
+  "reversal_of_spare",
+  "section_break_39",
+  "pending_due_to_material",
+  "section_break_41",
+  "amended_from",
+  "service__details"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_report_section",
+   "fieldtype": "Section Break",
+   "label": "Service Report"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Service Report No",
+   "options": "SLR-.YY.-.MM."
+  },
+  {
+   "fieldname": "service_log_no",
+   "fieldtype": "Data",
+   "label": "Site Service Log No"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "label": "Issued By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Type",
+   "options": "WTG\nBOP\nPSS"
+  },
+  {
+   "fetch_from": "wtg_name.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "label": "Customer"
+  },
+  {
+   "fetch_from": "wtg_name.cluster_name",
+   "fieldname": "cluster_name",
+   "fieldtype": "Read Only",
+   "label": "Cluster Name"
+  },
+  {
+   "columns": 2,
+   "fieldname": "service_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": " Service Status",
+   "options": "Incomplete\nCompleted with Obs. To be  during PM\nTotally Completed\nPending Due to Material Table"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "wtg_name.site",
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "depends_on": "eval:in_list([\"WTG\"], doc.asset_type)",
+   "fieldname": "wtg_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WTG Name",
+   "options": "WTG Master",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "wtg_name.site_name",
+   "fieldname": "site_name",
+   "fieldtype": "Read Only",
+   "label": "Site Name"
+  },
+  {
+   "depends_on": "eval:in_list([\"BOP\"], doc.asset_type)",
+   "fieldname": "feeder_name",
+   "fieldtype": "Data",
+   "label": "Feeder Name"
+  },
+  {
+   "depends_on": "eval:in_list([\"PSS\"], doc.asset_type)",
+   "fieldname": "pss_name",
+   "fieldtype": "Data",
+   "label": "PSS Name"
+  },
+  {
+   "fieldname": "task_lead_by",
+   "fieldtype": "Link",
+   "label": "Task Lead By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_nature",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Nature",
+   "options": "\nPM\nRBM\nEBM\nCRUST\nBOP\nTCA/R\nFM"
+  },
+  {
+   "fetch_from": "wtg_name.wtg_no",
+   "fieldname": "wtg_no",
+   "fieldtype": "Read Only",
+   "label": "WTG No"
+  },
+  {
+   "fieldname": "task_review_by",
+   "fieldtype": "Link",
+   "label": "Task Review By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "turbine_operational_status_details",
+   "fieldtype": "Section Break",
+   "label": "Turbine Operational Status Details"
+  },
+  {
+   "depends_on": "eval:doc.service_nature != 'PM'",
+   "fieldname": "fault_status",
+   "fieldtype": "Link",
+   "label": "WTG Status",
+   "options": "WTG Status Log"
+  },
+  {
+   "fieldname": "turbine_operational_status",
+   "fieldtype": "Table",
+   "label": "Turbine Operational Status",
+   "options": "Turbine Operational Status Table"
+  },
+  {
+   "fieldname": "fault_status_details",
+   "fieldtype": "Section Break",
+   "label": "WTG Status Log"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Task Handled BY"
+  },
+  {
+   "fieldname": "task_handled_by",
+   "fieldtype": "Table",
+   "label": "Task Handled BY",
+   "options": "Task Handled By Table"
+  },
+  {
+   "collapsible_depends_on": "eval:in_list([\"PM\"],doc.service_nature)",
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break",
+   "label": "Reversal of Spare",
+   "options": "Reversal of Spare Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Report",
+   "permlevel": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "service__details",
+   "fieldtype": "Small Text",
+   "label": "Service  Details"
+  },
+  {
+   "fieldname": "material_consumtion",
+   "fieldtype": "Section Break",
+   "label": "Material  Consumtion (Static)"
+  },
+  {
+   "fieldname": "material__consumtion",
+   "fieldtype": "Table",
+   "label": "Material  Consumtion",
+   "options": "Material Consume Table"
+  },
+  {
+   "depends_on": "eval:in_list([\"PM\"],doc.service_nature)",
+   "fieldname": "pm_activity",
+   "fieldtype": "Link",
+   "label": "PM Activity",
+   "options": "PM Activity"
+  },
+  {
+   "fieldname": "ptw_no",
+   "fieldtype": "Data",
+   "label": "PTW No"
+  },
+  {
+   "fieldname": "ptw_date",
+   "fieldtype": "Date",
+   "label": "PTW Date"
+  },
+  {
+   "fieldname": "ptw_issued_by",
+   "fieldtype": "Link",
+   "label": "PTW Issued by",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reversal_of_spare",
+   "fieldtype": "Table",
+   "label": "Reversal of Spare",
+   "options": "Reversal of Spare Table"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.service_nature != 'PM'",
+   "fieldname": "pending_due_to_material",
+   "fieldtype": "Table",
+   "label": "Pending Due to Material",
+   "options": "Pending Due to Material Table"
+  },
+  {
+   "fieldname": "section_break_41",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "task_lead_by.employee_name",
+   "fieldname": "issued_name",
+   "fieldtype": "Read Only",
+   "label": "Lead Name"
+  },
+  {
+   "fetch_from": "task_review_by.employee_name",
+   "fieldname": "ptw_issued_name",
+   "fieldtype": "Read Only",
+   "label": "Review Name"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-06-13 11:57:17.166332",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "Service Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "APMS Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "APMS Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PM Lead",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Area Incharge",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FAPO",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Material Incharge",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Functional Head",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "site_name,wtg_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,357 @@
+{
+ "autoname": "TSLog-[.main_status.:.sub_status.][.###.]",
+ "creation": "2019-12-02 12:49:00.943271",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_44",
+  "wtg_type",
+  "feeder_issue",
+  "section_break_3",
+  "group_wtg_name",
+  "wtg_name",
+  "status1",
+  "column_break_7",
+  "feeder_name",
+  "wtg_model",
+  "site",
+  "section_break_12",
+  "wtg_fault",
+  "main_status",
+  "is_remote_resettable",
+  "is_remote_resetted",
+  "max_reset_count",
+  "column_break_18",
+  "status_description",
+  "sub_status",
+  "is_auto_reset",
+  "reset_counter",
+  "available_reset_count",
+  "section_break_24",
+  "apms_verification_prior_to_reset",
+  "column_break_26",
+  "reset_count_availability",
+  "section_break_28",
+  "start",
+  "column_break_30",
+  "end",
+  "column_break_32",
+  "duration",
+  "details_section",
+  "root_cause",
+  "is_ack",
+  "action_taken",
+  "section_break_38",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "WTG Type  "
+  },
+  {
+   "fieldname": "wtg_type",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "WTG Type",
+   "options": "<label><input checked name=\"wtg_type\" selected=\"\" type=\"radio\" value=\"single_wtg\">&nbsp;&nbsp;Single WTG</label>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input name=\"wtg_type\" type=\"radio\" value=\"group_wtg\">&nbsp;&nbsp;Group WTG</label>"
+  },
+  {
+   "default": "0",
+   "fieldname": "feeder_issue",
+   "fieldtype": "Check",
+   "label": "Feeder Issue"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.feeder_issue == 1",
+   "fetch_from": "wtg_name.site",
+   "fieldname": "site",
+   "fieldtype": "Read Only",
+   "label": "Site"
+  },
+  {
+   "depends_on": "eval:doc.feeder_issue == 1",
+   "fieldname": "group_wtg_name",
+   "fieldtype": "Small Text",
+   "label": "WTG Group Name"
+  },
+  {
+   "depends_on": "eval:doc.feeder_issue == 0",
+   "fieldname": "wtg_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WTG Name",
+   "options": "WTG Master",
+   "reqd": 1
+  },
+  {
+   "depends_on": "action_taken",
+   "fieldname": "status1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nOpen-Service Log Generated\nPartialy Closed\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.feeder_issue == 1",
+   "fieldname": "feeder_name",
+   "fieldtype": "Link",
+   "label": "Feeder Name",
+   "options": "WTG Feeder"
+  },
+  {
+   "depends_on": "wtg_name,\neval:doc.feeder_issue ==1",
+   "fetch_from": "wtg_name.wtg_model",
+   "fieldname": "wtg_model",
+   "fieldtype": "Read Only",
+   "in_standard_filter": 1,
+   "label": "WTG Model"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wtg_fault",
+   "fieldtype": "Link",
+   "label": "WTG Status",
+   "options": "WTG Status",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "wtg_fault.main_status",
+   "fieldname": "main_status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Main Status",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wtg_fault.is_resettable",
+   "fieldname": "is_remote_resettable",
+   "fieldtype": "Read Only",
+   "label": "Is Remote Re-settable"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_remote_resetted",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Remote Resetted",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "wtg_fault.max_reset_count",
+   "fieldname": "max_reset_count",
+   "fieldtype": "Read Only",
+   "label": "Max Reset Allowed (in 24 hours)"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "wtg_fault.main_status_description",
+   "fieldname": "status_description",
+   "fieldtype": "Read Only",
+   "label": "Status Description"
+  },
+  {
+   "fetch_from": "wtg_fault.sub_status",
+   "fieldname": "sub_status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sub Status",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wtg_fault.is_auto_reset",
+   "fieldname": "is_auto_reset",
+   "fieldtype": "Read Only",
+   "label": "Is Auto-Reset"
+  },
+  {
+   "fieldname": "reset_counter",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Reset Counter"
+  },
+  {
+   "fieldname": "available_reset_count",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Available Reset Count"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "wtg_fault.prior_to_reset",
+   "fieldname": "apms_verification_prior_to_reset",
+   "fieldtype": "Read Only",
+   "label": "APMS Verification Prior to Reset",
+   "length": 500
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reset_count_availability",
+   "fieldtype": "Read Only",
+   "label": "Reset Count Availability",
+   "options": "<label for=\"reset_count_availability\" style=\"font-size: 12pt; height: 40px; width: 600px; color: red;\">Max Count Reached &amp; Can not be Resetted Remotely</label>\n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "End"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Root Cause",
+   "options": "WTG\nGRID\nROW\nBOP\nPSS\nTCA"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ack",
+   "fieldtype": "Check",
+   "label": "Is Acknowledged"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Action Taken",
+   "options": "\nAuto Resetted\nRemotely Resetted\nHandover to Site\nManual Stop - No Fault\nClosed - Feeder Trip"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark(If Any)"
+  }
+ ],
+ "modified": "2020-06-15 17:25:19.424704",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "WTG Status Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "APMS Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "APMS Manager",
+   "share": 1
+  }
+ ],
+ "search_fields": "wtg_name, wtg_fault,start, remark",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

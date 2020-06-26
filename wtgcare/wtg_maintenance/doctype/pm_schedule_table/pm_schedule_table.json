@@ -1,0 +1,80 @@
+{
+ "autoname": "PS-.###",
+ "creation": "2019-12-30 18:15:12.258321",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wtg_name",
+  "schedule_date",
+  "pm_activity",
+  "pm_service_order",
+  "measurement_log",
+  "status",
+  "workfow_status"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "wtg_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WTG Name",
+   "options": "WTG Master"
+  },
+  {
+   "columns": 1,
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Schedule Date"
+  },
+  {
+   "columns": 2,
+   "fieldname": "pm_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PM Activity",
+   "options": "PM Activity"
+  },
+  {
+   "columns": 2,
+   "fieldname": "pm_service_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PM Service Order",
+   "options": "Service Report"
+  },
+  {
+   "columns": 2,
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "columns": 2,
+   "fieldname": "measurement_log",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Measurement Log"
+  },
+  {
+   "columns": 2,
+   "fieldname": "workfow_status",
+   "fieldtype": "Select",
+   "label": "Workfow Status",
+   "options": "Pending for Submission\nPending for Material Review\nPending for TSO Aproval\nPending for FAPO Aproval\nTechnically Completed"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-02-28 13:16:43.522940",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Schedule Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

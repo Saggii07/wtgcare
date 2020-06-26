@@ -1,0 +1,714 @@
+{
+ "autoname": "format:PM-MML-{fiscal_year}-{equipment_no}",
+ "creation": "2019-12-24 12:47:24.074982",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pm_activity",
+  "column_break_2",
+  "date",
+  "asset_details_section",
+  "service_log__no",
+  "wind_park",
+  "equipment_no",
+  "column_break_6",
+  "asset_owner",
+  "wtg_serial_no",
+  "fiscal_year",
+  "measurement_details_during_mechanical_maintenance",
+  "torque_wrench_calibration_section",
+  "twc_sn_1",
+  "twc_sn_2",
+  "column_break_12",
+  "due_date",
+  "due_date_1",
+  "mechanical_over_speed_test_value_section",
+  "mechanical_os_value_blade_a",
+  "column_break_19",
+  "mechanical_os_value_blade_b",
+  "column_break_21",
+  "mechanical_os_value_blade_c",
+  "src_and_torque_support_plate_wear_out_gap",
+  "make",
+  "column_break_25",
+  "torque_support_gap",
+  "blade_stud_batch_no_section",
+  "blade_stud_blade_a",
+  "column_break_29",
+  "blade_stud_blade_b",
+  "column_break_31",
+  "blade_stud_blade_c",
+  "lightning_conductor_min_gap_at_discharge_ring_section",
+  "lightning_conductor_mg_blade_a",
+  "column_break_35",
+  "lightning_conductor_mg_blade_b",
+  "column_break_37",
+  "lightning_conductor_mg_blade_c",
+  "lightning_conductor_gap_at_12o_clock_stator_side_section",
+  "lightning_conductor_gap_blade_a",
+  "column_break_41",
+  "lightning_conductor_gap_blade_b",
+  "column_break_43",
+  "lightning_conductor_gap_blade_c",
+  "presence_o_cls_section",
+  "cls_available",
+  "column_break_47",
+  "cls_not_available",
+  "if_cls_available_section",
+  "cut_of_time",
+  "grease_level",
+  "column_break_52",
+  "pressure",
+  "backlash_at_yaw_gear_rim_section",
+  "pinion_1",
+  "pinion_3",
+  "column_break_57",
+  "pinion_2",
+  "pinion_4",
+  "status_48_xx_max_counters_section",
+  "status_48_xx_max_counters_1",
+  "status_48_xx_max_counters_10",
+  "column_break_63",
+  "status_48_xx_max_counters_3",
+  "status_48_xx_max_counters_21",
+  "column_break_66",
+  "status_48_xx_max_counters_4",
+  "status_48_xx_max_counters_22",
+  "column_break_69",
+  "status_48_xx_max_counters_5",
+  "max_oscillation_counter_section",
+  "max_oscillation_counter_transversal",
+  "column_break_73",
+  "max_oscillation_counter_longitudinal",
+  "max_oscillation_during_stop_section",
+  "max_oscillation_stop_transversal",
+  "column_break_77",
+  "max_oscillation_stop_longitudinal",
+  "bearing_temperature_section",
+  "front",
+  "rear",
+  "column_break_82",
+  "front_max",
+  "rear_max",
+  "shaft_nut_monitoring_switch_status_section",
+  "available",
+  "column_break_87",
+  "not_available",
+  "yearly_colour_code_section",
+  "temporary_lubrication_tin_installation_date",
+  "column_break_90",
+  "deviation_in_marking_position_after_shifting_of_stator_jib",
+  "section_break_92",
+  "remark_if_any",
+  "section_break_94",
+  "task_lead_by",
+  "pm_lead",
+  "column_break_96",
+  "task_review_by",
+  "task_reviwer"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_activity",
+   "fieldtype": "Link",
+   "label": "PM Activity",
+   "options": "PM Activity",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "asset_details_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Details"
+  },
+  {
+   "fetch_from": "pm_activity.service_log",
+   "fieldname": "service_log__no",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Log  No."
+  },
+  {
+   "fetch_from": "pm_activity.wind_park",
+   "fieldname": "wind_park",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wind Park"
+  },
+  {
+   "fetch_from": "pm_activity.wtg_name",
+   "fieldname": "equipment_no",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Equipment No."
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "pm_activity.asset_owner",
+   "fieldname": "asset_owner",
+   "fieldtype": "Read Only",
+   "label": "Asset Owner"
+  },
+  {
+   "fieldname": "wtg_serial_no",
+   "fieldtype": "Read Only",
+   "label": "WTG Serial No."
+  },
+  {
+   "fieldname": "measurement_details_during_mechanical_maintenance",
+   "fieldtype": "Section Break",
+   "label": "Measurement Details During Mechanical Maintenance"
+  },
+  {
+   "fieldname": "torque_wrench_calibration_section",
+   "fieldtype": "Section Break",
+   "label": "Torque Wrench Calibration"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mechanical_over_speed_test_value_section",
+   "fieldtype": "Section Break",
+   "label": "Mechanical Over Speed Test Value"
+  },
+  {
+   "fieldname": "twc_sn_1",
+   "fieldtype": "Data",
+   "label": "1. Sr. No."
+  },
+  {
+   "fieldname": "twc_sn_2",
+   "fieldtype": "Data",
+   "label": "1. Sr. No"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "due_date_1",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "mechanical_os_value_blade_a",
+   "fieldtype": "Data",
+   "label": "Blade A"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mechanical_os_value_blade_b",
+   "fieldtype": "Data",
+   "label": "Blade B"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mechanical_os_value_blade_c",
+   "fieldtype": "Data",
+   "label": "Blade C"
+  },
+  {
+   "fieldname": "src_and_torque_support_plate_wear_out_gap",
+   "fieldtype": "Section Break",
+   "label": "SRC & Torque Support Plate Wear Out (play) Gap"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "torque_support_gap",
+   "fieldtype": "Data",
+   "label": "Torque Support Gap"
+  },
+  {
+   "fieldname": "blade_stud_batch_no_section",
+   "fieldtype": "Section Break",
+   "label": "Blade Stud Batch No."
+  },
+  {
+   "fieldname": "blade_stud_blade_a",
+   "fieldtype": "Data",
+   "label": "Blade A"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blade_stud_blade_b",
+   "fieldtype": "Data",
+   "label": "Blade B"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blade_stud_blade_c",
+   "fieldtype": "Data",
+   "label": "Blade C"
+  },
+  {
+   "fieldname": "lightning_conductor_min_gap_at_discharge_ring_section",
+   "fieldtype": "Section Break",
+   "label": "Lightning Conductor Min Gap At Discharge Ring"
+  },
+  {
+   "fieldname": "lightning_conductor_mg_blade_a",
+   "fieldtype": "Data",
+   "label": "Blade A"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lightning_conductor_mg_blade_b",
+   "fieldtype": "Data",
+   "label": "Blade B"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lightning_conductor_mg_blade_c",
+   "fieldtype": "Data",
+   "label": "Blade C"
+  },
+  {
+   "fieldname": "lightning_conductor_gap_at_12o_clock_stator_side_section",
+   "fieldtype": "Section Break",
+   "label": "Lightning Conductor Gap At 12'O Clock Stator Side"
+  },
+  {
+   "fieldname": "lightning_conductor_gap_blade_a",
+   "fieldtype": "Data",
+   "label": "Blade A"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lightning_conductor_gap_blade_b",
+   "fieldtype": "Data",
+   "label": "Blade B"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lightning_conductor_gap_blade_c",
+   "fieldtype": "Data",
+   "label": "Blade C"
+  },
+  {
+   "fieldname": "presence_o_cls_section",
+   "fieldtype": "Section Break",
+   "label": "Presence OF CLS"
+  },
+  {
+   "default": "0",
+   "fieldname": "available",
+   "fieldtype": "Check",
+   "label": "Available"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "not_available",
+   "fieldtype": "Check",
+   "label": "Not Available"
+  },
+  {
+   "depends_on": "eval:doc.cls_available == 1",
+   "fieldname": "if_cls_available_section",
+   "fieldtype": "Section Break",
+   "label": "IF CLS Available"
+  },
+  {
+   "depends_on": "eval:doc.cls_available == 1",
+   "fieldname": "cut_of_time",
+   "fieldtype": "Data",
+   "label": "Cut Of Time"
+  },
+  {
+   "depends_on": "eval:doc.cls_available == 1",
+   "fieldname": "grease_level",
+   "fieldtype": "Data",
+   "label": "Grease Level"
+  },
+  {
+   "fieldname": "column_break_52",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.cls_available == 1",
+   "fieldname": "pressure",
+   "fieldtype": "Data",
+   "label": "Pressure"
+  },
+  {
+   "fieldname": "backlash_at_yaw_gear_rim_section",
+   "fieldtype": "Section Break",
+   "label": "Backlash At Yaw Gear Rim"
+  },
+  {
+   "fieldname": "pinion_1",
+   "fieldtype": "Data",
+   "label": "Pinion-1"
+  },
+  {
+   "fieldname": "pinion_3",
+   "fieldtype": "Data",
+   "label": "Pinion-3"
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pinion_2",
+   "fieldtype": "Data",
+   "label": "Pinion-2"
+  },
+  {
+   "fieldname": "pinion_4",
+   "fieldtype": "Data",
+   "label": "Pinion-4"
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_section",
+   "fieldtype": "Section Break",
+   "label": "Status 48 XX Max. Counters"
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_1",
+   "fieldtype": "Data",
+   "label": "48:1="
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_10",
+   "fieldtype": "Data",
+   "label": "48:10 ="
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_3",
+   "fieldtype": "Data",
+   "label": "48:3 ="
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_21",
+   "fieldtype": "Data",
+   "label": "48:21 ="
+  },
+  {
+   "fieldname": "column_break_66",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_4",
+   "fieldtype": "Data",
+   "label": "48:4 ="
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_22",
+   "fieldtype": "Data",
+   "label": "48:22 ="
+  },
+  {
+   "fieldname": "column_break_69",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status_48_xx_max_counters_5",
+   "fieldtype": "Data",
+   "label": "48:5 ="
+  },
+  {
+   "default": "0",
+   "fieldname": "cls_available",
+   "fieldtype": "Check",
+   "label": "Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "cls_not_available",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Not Available"
+  },
+  {
+   "fieldname": "max_oscillation_counter_section",
+   "fieldtype": "Section Break",
+   "label": "Max. Oscillation Counter"
+  },
+  {
+   "fieldname": "max_oscillation_counter_transversal",
+   "fieldtype": "Data",
+   "label": "Transversal"
+  },
+  {
+   "fieldname": "column_break_73",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_oscillation_counter_longitudinal",
+   "fieldtype": "Data",
+   "label": "Longitudinal"
+  },
+  {
+   "fieldname": "max_oscillation_during_stop_section",
+   "fieldtype": "Section Break",
+   "label": "Max. Oscillation During Stop"
+  },
+  {
+   "fieldname": "max_oscillation_stop_transversal",
+   "fieldtype": "Data",
+   "label": "Transversal"
+  },
+  {
+   "fieldname": "column_break_77",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_oscillation_stop_longitudinal",
+   "fieldtype": "Data",
+   "label": "Longitudinal"
+  },
+  {
+   "fieldname": "bearing_temperature_section",
+   "fieldtype": "Section Break",
+   "label": "Bearing Temperature"
+  },
+  {
+   "fieldname": "front",
+   "fieldtype": "Data",
+   "label": "Front Current"
+  },
+  {
+   "fieldname": "rear",
+   "fieldtype": "Data",
+   "label": "Rear Current"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "front_max",
+   "fieldtype": "Data",
+   "label": "Front Max"
+  },
+  {
+   "fieldname": "rear_max",
+   "fieldtype": "Data",
+   "label": "Rear Max"
+  },
+  {
+   "fieldname": "shaft_nut_monitoring_switch_status_section",
+   "fieldtype": "Section Break",
+   "label": "Shaft Nut Monitoring Switch Status"
+  },
+  {
+   "fieldname": "yearly_colour_code_section",
+   "fieldtype": "Section Break",
+   "label": "Yearly Colour Code"
+  },
+  {
+   "fieldname": "temporary_lubrication_tin_installation_date",
+   "fieldtype": "Date",
+   "label": "Temporary Lubrication Tin Installation Date"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deviation_in_marking_position_after_shifting_of_stator_jib",
+   "fieldtype": "Data",
+   "label": "Deviation In Marking Position After Shifting Of Stator Jib"
+  },
+  {
+   "fieldname": "section_break_92",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark_if_any",
+   "fieldtype": "Small Text",
+   "label": "Remark If Any"
+  },
+  {
+   "fieldname": "section_break_94",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "(Activity In-Charge/PM Lead)",
+   "fieldname": "task_lead_by",
+   "fieldtype": "Link",
+   "label": "Task Lead By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_96",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "(Technical Site Officer)",
+   "fieldname": "task_review_by",
+   "fieldtype": "Link",
+   "label": "Task Review By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_87",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Select",
+   "label": "Fiscal Year",
+   "options": "1920\n2021\n2122\n2324",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "task_lead_by.employee_name",
+   "fieldname": "pm_lead",
+   "fieldtype": "Read Only",
+   "label": "PM Lead"
+  },
+  {
+   "fetch_from": "task_review_by.employee_name",
+   "fieldname": "task_reviwer",
+   "fieldtype": "Read Only",
+   "label": "Task Reviwer"
+  }
+ ],
+ "modified": "2020-01-30 18:30:30.604654",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Mechanical Measurement Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PM Lead",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Material Incharge",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FAPO",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Area Incharge",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Functional Head",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

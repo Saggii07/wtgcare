@@ -1,0 +1,126 @@
+{
+ "autoname": "field:pm_schedule_name",
+ "creation": "2019-12-30 18:11:16.721939",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pm_type",
+  "site",
+  "fiscal_year",
+  "column_break_3",
+  "pm_periodicity",
+  "site_name",
+  "pm_schedule_name",
+  "section_break_6",
+  "wtg_wise_schedule"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Type",
+   "options": "Electrical\nMechanical\nVisual\nGrease\nElectro-mechanical Maintenance\nUSS Maintenance\nRotor Blade Resistance Measurement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pm_periodicity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Periodicity",
+   "options": "Quarterly\nHalf Yearly\nYearly\n4 Yearly\n6 Yearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Site",
+   "options": "Site",
+   "reqd": 1
+  },
+  {
+   "fieldname": "wtg_wise_schedule",
+   "fieldtype": "Table",
+   "label": "WTG Wise Schedule",
+   "options": "PM Schedule Table"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "site.site_name",
+   "fieldname": "site_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Site Name"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Select",
+   "label": "Fiscal year",
+   "options": "1920\n2021\n2122\n2223",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pm_schedule_name",
+   "fieldtype": "Read Only",
+   "label": "PM Schedule Name",
+   "unique": 1
+  }
+ ],
+ "modified": "2020-06-19 17:41:09.567600",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Functional Head",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

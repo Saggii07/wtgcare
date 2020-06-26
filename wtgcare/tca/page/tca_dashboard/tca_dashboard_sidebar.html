@@ -1,0 +1,13 @@
+<div class="tca-dashboard-sidebar">
+   Sidebar
+    <div class="profile-details">
+       
+        {% if user_location %}
+        <p class="user-location text-muted"><span class="interest-icon"><i class="fa fa-map-marker"></i></span>{{user_location}}</p>
+        {% endif %}
+        {% if user_interest %}
+        <p class="user-interests text-muted"><span class="interest-icon"><i class="fa fa-puzzle-piece"></i></span>{{user_interest}}</p>
+        {% endif %}
+    </div>
+    
+</div>

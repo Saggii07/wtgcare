@@ -1,0 +1,159 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:check_point_name",
+ "creation": "2019-12-03 10:21:37.364250",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "check_point_group",
+  "check_point_name",
+  "inspection_type",
+  "is_active",
+  "permissible_limit",
+  "column_break_6",
+  "pm_type",
+  "wtg_model",
+  "wtg_technology",
+  "inspection_measurement_unit",
+  "safety_instruction",
+  "is_suppliment_attached",
+  "section_break_13",
+  "description",
+  "section_break_15",
+  "material_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "check_point_group",
+   "fieldtype": "Select",
+   "label": "Check Point Group",
+   "options": "Common\nTechnology\nWTG Model"
+  },
+  {
+   "fieldname": "check_point_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inspection Type",
+   "options": "Visual\nMeasurement\nFunctional\nVisual /Measurement\nVisual / functional\nVisual /Measurement /Functional\nVisual/ Torque wrench\nVisual /Alignment\nVisual/Knocking test\nVisual/Knocking\nVisual/Functional Check\nVisual/Application\nVisual/ Knocking test/ Torque wrench\nVisual / DPT\nVisual/ Feeler gauge\nVisual /Update\nVisual/Binocular check\nVisual/Torque Application\nVisual/ Setting check\nVisual/Documentation\nVisual /Operational check\nVisual/Maintenance"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "permissible_limit",
+   "fieldtype": "Data",
+   "label": "Permissible Limit"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pm_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Type",
+   "options": "Electrical\nMechanical\nVisual\nGrease\nElectro-mechanical Maintenance\nUSS Maintenance\nRotor Blade Resistance Measurement"
+  },
+  {
+   "depends_on": "eval:in_list([\"WTG Model\"],doc.check_point_group)",
+   "fieldname": "wtg_model",
+   "fieldtype": "Select",
+   "label": "WTG Model",
+   "options": "E40\nE48\nE53"
+  },
+  {
+   "depends_on": "eval:in_list([\"Technology\"],doc.check_point_group)",
+   "fieldname": "wtg_technology",
+   "fieldtype": "Select",
+   "label": "WTG Technology",
+   "options": "Enercon\nInox"
+  },
+  {
+   "fieldname": "inspection_measurement_unit",
+   "fieldtype": "Select",
+   "label": "Inspection Measurement Unit",
+   "options": "Empty\nmm\nKWh\nrpm"
+  },
+  {
+   "fieldname": "safety_instruction",
+   "fieldtype": "Select",
+   "label": "Safety Instruction",
+   "options": "Normal\nImportant\nDanger\nWarning\nCaution"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_suppliment_attached",
+   "fieldtype": "Check",
+   "label": "Is Suppliment Attached"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "material_required",
+   "fieldtype": "Table",
+   "label": "Material Required",
+   "options": "Material Required Table"
+  }
+ ],
+ "modified": "2020-06-19 17:43:24.188893",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Check Point",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

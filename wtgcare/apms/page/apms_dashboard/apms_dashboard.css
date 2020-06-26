@@ -1,0 +1,525 @@
+
+  div.widget {
+    padding-top: 0px;
+  }
+.row {
+	margin-top: 4px;
+	margin-bottom:4px;
+        padding-top: 2px;
+	padding-bottom:2px;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: .25s box-shadow;
+  transition: .25s box-shadow;
+}
+
+.card:focus,
+.card:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-inverse .card-img-overlay {
+  background-color: rgba(51, 51, 51, 0.85);
+  border-color: rgba(51, 51, 51, 0.85);
+}
+
+.incident-title {
+  background-color: #1087dd;
+  color: #f1f1f1;
+  font-size: 17px;
+  text-align:center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer.sticky-footer {
+  width: 100%;
+  background-color: #0a1633;
+}
+.inline {
+  display: inline-block;
+  margin: 1em;
+}
+.dashboard_main_title {
+  font-family: PT Sans,Trebuchet MS,Arial Narrow,sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.dashboard_date {
+  font-family: PT Sans,Trebuchet MS,Arial Narrow,sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.custom_footer {
+  background-color: #0a1633;
+  font-family: PT Sans,Trebuchet MS,Arial Narrow,sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.c3-chart-arc path {
+  stroke: transparent !important;
+}
+
+
+
+
+/* custome y grid line for spline/timeseries c3 charts */
+.c3-ygrid-line.threshold line {
+    stroke: #FF0000;
+}
+
+/* Alert styles */
+#alertDiv {
+    box-sizing: border-box;
+    /* width: 1000px; */
+  }
+  
+  #alertDiv ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #alertDiv ul li {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #ddd;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #EA4858;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;    
+  }
+  
+  #alertDiv ul li:hover {
+    background-color: #f8d7da;
+    color: black;
+  }
+  
+  #alertDiv .close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+  }
+  
+  #alertDiv .close:hover {background: #bbb;}
+  /* End of Alert styles*/
+
+
+  /*-- C3 Chart --*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+.c3 svg {
+  font: 10px sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c3 path,
+.c3 line {
+  fill: none;
+  stroke: #000;
+}
+
+.c3 text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges;
+}
+
+.c3-chart-arc path {
+  stroke: #fff;
+}
+
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 13px;
+}
+
+/*-- Axis --*/
+
+/*-- Grid --*/
+
+.c3-grid line {
+  stroke: #aaa;
+}
+
+.c3-grid text {
+  fill: #aaa;
+}
+
+.c3-xgrid,
+.c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+
+/*-- Text on Chart --*/
+
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+
+/*-- Line --*/
+
+.c3-line {
+  stroke-width: 1px;
+}
+
+/*-- Point --*/
+
+.c3-circle._expanded_ {
+  stroke-width: 1px;
+  stroke: white;
+}
+
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 2px;
+}
+
+/*-- Bar --*/
+
+.c3-bar {
+  stroke-width: 0;
+}
+
+.c3-bar._expanded_ {
+  fill-opacity: 1;
+  fill-opacity: 0.75;
+}
+
+/*-- Focus --*/
+
+.c3-target.c3-focused {
+  opacity: 1;
+}
+
+.c3-target.c3-focused path.c3-line,
+.c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+
+.c3-target.c3-defocused {
+  opacity: 0.3 !important;
+}
+
+/*-- Region --*/
+
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1;
+}
+
+/*-- Brush --*/
+
+.c3-brush .extent {
+  fill-opacity: .1;
+}
+
+/*-- Select - Drag --*/
+
+/*-- Legend --*/
+
+.c3-legend-item {
+  font-size: 12px;
+}
+
+.c3-legend-item-hidden {
+  opacity: 0.15;
+}
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1;
+}
+
+/*-- Title --*/
+
+.c3-title {
+  font: 14px sans-serif;
+}
+
+/*-- Tooltip --*/
+
+.c3-tooltip-container {
+  z-index: 10;
+}
+
+.c3-tooltip {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  empty-cells: show;
+  -webkit-box-shadow: 7px 7px 12px -9px #777777;
+  -moz-box-shadow: 7px 7px 12px -9px #777777;
+  box-shadow: 7px 7px 12px -9px #777777;
+  opacity: 0.9;
+}
+
+.c3-tooltip tr {
+  border: 1px solid #CCC;
+}
+
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: #FFF;
+}
+
+.c3-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: #fff;
+  border-left: 1px dotted #999;
+}
+
+.c3-tooltip td>span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+
+.c3-tooltip td.value {
+  text-align: right;
+}
+
+/*-- Area --*/
+
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+/*-- Arc --*/
+
+.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em;
+}
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: #000;
+  font-size: 16px;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+
+.c3-chart-arc .c3-gauge-value {
+  fill: #000;
+  /*  font-size: 28px !important;*/
+}
+
+.c3-chart-arc.c3-target g path {
+  opacity: 1;
+}
+
+.c3-chart-arc.c3-target.c3-focused g path {
+  opacity: 1;
+}
+
+.card {
+  width: auto;
+  text-align: center;
+}
+
+.cardValue {
+  border-radius: 5px;
+  background-color: #2c97c9;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardValue h1 {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.cardLabel {
+  font-size: 14px;
+}
+
+.widget {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  color: #262626;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  display: block;
+  padding-top: 50px;
+  clear: both;
+}
+
+
+     hr.class-1 { 
+            border-top: 1px solid #999999; 
+            width:98%;
+            margin-top: 0px; 
+            margin-bottom: 0px;
+            border-bottom: 1px solid #999999; 
+        } 
+    hr.class-2 { 
+            border-top: 1px solid #999999; 
+            width:100%;
+            margin-top: 0px; 
+            margin-bottom: 0px;
+            border-bottom: 1px solid #999999; 
+        } 
+          
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%; 
+	  
+	}
+
+	.grid-item {
+	  background-color: rgba(255, 255, 255, 0.8);
+	  border: 2px solid #5a5a5a;
+	  font-size: 25px;
+	  text-align: center;
+	  margin:3px;
+	  border-radius: 1px;
+          border-style:grove;
+	}
+	.blue {
+	    color: #3abeff;
+	    font-size:25px;
+            margin-top:2px;
+	}
+
+	.red {
+	    color: #f70d1a;
+	    font-size:20px;
+	}
+
+	.green {
+	    color: #4fa800;
+	    font-size:20px;
+	}
+
+	.yellow {
+	    color: #d69900;
+	    font-size:20px;
+	}
+	.gray {
+	    color: #3b3d3e;
+	    font-size:20px;
+	}
+	.summry-list
+	{
+	       margin:1px;
+	       padding:1px;
+	}
+
+	.site-name
+	{
+	padding-left: 3%;
+	font-size:xxx-large;
+	}
+	.date-time-update
+	{
+	padding-top: 50px;
+        padding-right: 3%;
+        padding-left: 5%;
+	}
+	.summry-box
+	{
+	font-size:xxx-large;
+	}
+	.device-name
+	{
+	font-size:small; 
+	margin:2px;
+	}
+	.device-row
+	{
+	font-size:small; 
+	margin:1px;
+        
+	}
+       
+	.sensor-name
+	{
+	font-size:small;
+        font-weight: bold;
+        border: 1px solid #5a5a5a;
+	}
+        .sensor-name1
+	{
+	font-size:small;
+        font-weight: bold;
+        border: 1px solid #228B22;
+	}
+	.sensor-name2
+	{
+	font-size:small;
+        font-weight: bold;
+        border: 1px solid #DC143C;
+	}
+
+	.sensor-val
+	{
+	font-size:small;
+	}
+	.sensor-btn
+	{
+	padding-left:10px;
+	}
+        .p-mar-sensor
+        {
+         margin: 2px;
+         font-size: 14px;
+         font-weight: bold;
+        }
+	div.ex1 {
+	  background-color: white;
+	  width: 100%;
+	  height: 1025px;
+	  overflow-y: scroll;
+	}
+
+

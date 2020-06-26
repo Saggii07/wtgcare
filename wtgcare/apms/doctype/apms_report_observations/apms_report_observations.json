@@ -1,0 +1,177 @@
+{
+ "autoname": "ARO-.#",
+ "creation": "2019-12-05 10:11:16.290580",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "apms_report",
+  "site_code",
+  "wtg",
+  "assigned_to",
+  "observation_statement",
+  "post_action_observation",
+  "site_final_remark",
+  "next_activity_date",
+  "column_break_6",
+  "analysis_type",
+  "site",
+  "reported_on",
+  "assigned__name",
+  "action_taken",
+  "site_remark_received_on",
+  "service_log_no",
+  "status",
+  "created_by1"
+ ],
+ "fields": [
+  {
+   "fieldname": "apms_report",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "APMS Report",
+   "options": "APMS Report Submission"
+  },
+  {
+   "fetch_from": "apms_report.analysis_type",
+   "fieldname": "analysis_type",
+   "fieldtype": "Read Only",
+   "label": "Analysis Type"
+  },
+  {
+   "fetch_from": "site_code.site_name",
+   "fieldname": "site",
+   "fieldtype": "Read Only",
+   "label": "Site Name"
+  },
+  {
+   "fieldname": "wtg",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WTG",
+   "options": "WTG Master"
+  },
+  {
+   "fieldname": "observation_statement",
+   "fieldtype": "Small Text",
+   "label": "Observation Statement"
+  },
+  {
+   "default": "now",
+   "fieldname": "reported_on",
+   "fieldtype": "Date",
+   "label": "Reported On"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Assigned To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Small Text",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "service_log_no",
+   "fieldtype": "Link",
+   "label": "Service Log No.",
+   "options": "Service Report"
+  },
+  {
+   "fieldname": "site_final_remark",
+   "fieldtype": "Small Text",
+   "label": "Site Final Remark"
+  },
+  {
+   "fieldname": "site_remark_received_on",
+   "fieldtype": "Date",
+   "label": "Site Remark Received On"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nAction Taken\nResolved\nUnresolved\nVerification Pending\nClosed"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "site.site_name",
+   "fieldname": "site_code",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "fetch_from": "assigned_to.employee_name",
+   "fieldname": "assigned__name",
+   "fieldtype": "Read Only",
+   "label": "Assigned  Name"
+  },
+  {
+   "fetch_from": "apms_report.created_by_name",
+   "fieldname": "created_by1",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Created By Name"
+  },
+  {
+   "fieldname": "next_activity_date",
+   "fieldtype": "Date",
+   "label": "Next Activity Date"
+  },
+  {
+   "fieldname": "post_action_observation",
+   "fieldtype": "Select",
+   "label": "Post Action Observation(Site)",
+   "options": "Resolved\nUnresolved\nUnder Observation"
+  }
+ ],
+ "modified": "2020-02-14 13:31:10.136872",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "APMS Report Observations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

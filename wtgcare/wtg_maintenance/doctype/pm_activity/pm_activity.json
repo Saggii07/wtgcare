@@ -1,0 +1,446 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:pm_activity_name",
+ "creation": "2019-12-03 10:09:12.503339",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wtg_name",
+  "pm_type",
+  "pm_periodicity",
+  "service_log",
+  "pm_activity_name",
+  "column_break_5",
+  "wind_park",
+  "asset_owner",
+  "wtg_model",
+  "wtg_technology",
+  "wtg_no",
+  "fiscal_year",
+  "pm_check_points_section",
+  "pm_check_points",
+  "pm_measurements_sec",
+  "is_measurement_log_filled",
+  "column_break_17",
+  "measurement_log",
+  "column_break_19",
+  "open_measurement_log",
+  "suppliment_with_refrence_to_maintenance_section",
+  "foundation",
+  "winch",
+  "rotor_blade",
+  "column_break_16",
+  "concrete_tower",
+  "cls",
+  "measurement_sheet",
+  "column_break_20",
+  "ascent_ladder",
+  "generator",
+  "column_break_23",
+  "lrpc_cable",
+  "generator_air_gap",
+  "pm_ppe_section",
+  "ppe_used",
+  "section_break_28",
+  "task_lead_by",
+  "scheduled_date",
+  "pm_lead_name",
+  "column_break_31",
+  "task_review_by",
+  "start_date",
+  "pm_review_name",
+  "column_break_34",
+  "status",
+  "completion_date",
+  "amended_from",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_activity_name",
+   "fieldtype": "Read Only",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "service_log",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Service Order"
+  },
+  {
+   "fieldname": "pm_periodicity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PM Periodicity",
+   "options": "Quarterly\nHalf Yearly\nYearly\n4 Yearly\n6 Yearly",
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "service_log.wtg_name",
+   "fieldname": "wtg_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WTG Name",
+   "options": "WTG Master",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pm_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PM Type",
+   "options": "\nElectrical\nMechanical\nVisual\nGrease\nElectro-mechanical Maintenance\nUSS Maintenance\nRotor Blade Resistance Measurement",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "wtg_name.site_name",
+   "fieldname": "wind_park",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Wind Park",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wtg_name.customer_name",
+   "fieldname": "asset_owner",
+   "fieldtype": "Read Only",
+   "label": "Asset Owner"
+  },
+  {
+   "fetch_from": "service_log.wtg_no",
+   "fieldname": "wtg_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "WTG No"
+  },
+  {
+   "fieldname": "pm_check_points_section",
+   "fieldtype": "Section Break",
+   "label": "PM Check Points"
+  },
+  {
+   "fieldname": "pm_check_points",
+   "fieldtype": "Table",
+   "label": "PM Check Points",
+   "options": "PM Check Point Table"
+  },
+  {
+   "fieldname": "suppliment_with_refrence_to_maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Suppliment With Refrence to Maintenance"
+  },
+  {
+   "default": "0",
+   "fieldname": "foundation",
+   "fieldtype": "Check",
+   "label": "Foundation"
+  },
+  {
+   "default": "0",
+   "fieldname": "winch",
+   "fieldtype": "Check",
+   "label": "Winch"
+  },
+  {
+   "default": "0",
+   "fieldname": "rotor_blade",
+   "fieldtype": "Check",
+   "label": "Rotor Blade"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "concrete_tower",
+   "fieldtype": "Check",
+   "label": "Concrete Tower"
+  },
+  {
+   "default": "0",
+   "fieldname": "cls",
+   "fieldtype": "Check",
+   "label": "CLS"
+  },
+  {
+   "default": "0",
+   "fieldname": "measurement_sheet",
+   "fieldtype": "Check",
+   "label": "Measurement Sheet"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ascent_ladder",
+   "fieldtype": "Check",
+   "label": "Ascent Ladder"
+  },
+  {
+   "default": "0",
+   "fieldname": "generator",
+   "fieldtype": "Check",
+   "label": "Generator"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lrpc_cable",
+   "fieldtype": "Check",
+   "label": "LRPC Cable"
+  },
+  {
+   "default": "0",
+   "fieldname": "generator_air_gap",
+   "fieldtype": "Check",
+   "label": "Generator Air Gap"
+  },
+  {
+   "fieldname": "pm_ppe_section",
+   "fieldtype": "Section Break",
+   "label": "PM PPE"
+  },
+  {
+   "fieldname": "ppe_used",
+   "fieldtype": "Table",
+   "label": "PPE Used",
+   "options": "PM PPE Table"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_lead_by",
+   "fieldtype": "Link",
+   "label": "Task Lead By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Scheduled Date"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "wind_park.site_incharge",
+   "fieldname": "task_review_by",
+   "fieldtype": "Link",
+   "label": "Task Review By",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nService Order Assigned\nOngoing\nPartially Completed\nCompleted"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "collapsible_depends_on": "service_log",
+   "fieldname": "pm_measurements_sec",
+   "fieldtype": "Section Break",
+   "label": "PM Measurements"
+  },
+  {
+   "default": "0",
+   "depends_on": "service_log",
+   "fieldname": "is_measurement_log_filled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Measurement Log Filled",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wtg_name.wtg_model",
+   "fieldname": "wtg_model",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "WTG Model",
+   "options": "WTG Model",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wtg_name.wtg_technology",
+   "fieldname": "wtg_technology",
+   "fieldtype": "Read Only",
+   "label": "WTG Technology"
+  },
+  {
+   "depends_on": "service_log",
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "service_log",
+   "fieldname": "measurement_log",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Measurement Log"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PM Activity",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Select",
+   "label": "Fiscal Year",
+   "options": "1920\n2021\n2122\n2324"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "open_measurement_log",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Open Measurement Log"
+  },
+  {
+   "fetch_from": "task_lead_by.employee_name",
+   "fieldname": "pm_lead_name",
+   "fieldtype": "Read Only",
+   "label": "Lead Name"
+  },
+  {
+   "fetch_from": "task_review_by.employee_name",
+   "fieldname": "pm_review_name",
+   "fieldtype": "Read Only",
+   "label": "Review Name"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "options": "Workflow State"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-06-23 14:30:34.993737",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PM Lead",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Area Incharge",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FAPO",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Functional Head",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Material Incharge",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2020-01-18 14:39:16.379059",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-02-18 16:22:28.886272",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "apms-dashboard",
+ "owner": "Administrator",
+ "page_name": "apms-dashboard",
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "APMS Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "APMS Dashboard"
+}

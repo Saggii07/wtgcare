@@ -1,0 +1,89 @@
+{
+ "autoname": "field:model_name",
+ "creation": "2019-12-02 11:47:31.930847",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "model_name",
+  "wtg_manufacturer",
+  "capacity",
+  "technology",
+  "tower_type",
+  "hub_height"
+ ],
+ "fields": [
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "wtg_manufacturer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WTG Manufacturer",
+   "options": "WTG Manufacturer"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Capacity (Mega Watt)"
+  },
+  {
+   "fieldname": "technology",
+   "fieldtype": "Data",
+   "label": "Technology"
+  },
+  {
+   "fieldname": "tower_type",
+   "fieldtype": "Data",
+   "label": "Tower Type"
+  },
+  {
+   "fieldname": "hub_height",
+   "fieldtype": "Float",
+   "label": "Hub Height"
+  }
+ ],
+ "modified": "2020-04-28 16:15:59.292888",
+ "modified_by": "Administrator",
+ "module": "WTG Core",
+ "name": "WTG Model",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "wtg_manufacturer,capacity",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "model_name",
+ "track_changes": 1
+}

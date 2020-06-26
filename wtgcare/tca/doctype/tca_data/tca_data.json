@@ -1,0 +1,269 @@
+{
+ "_comments": "[]",
+ "_liked_by": "[]",
+ "actions": [],
+ "autoname": "TD-.#####",
+ "creation": "2019-12-02 15:36:47.443437",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tca_activity",
+  "section_break_2",
+  "wtg_name",
+  "section_name",
+  "subsection_name",
+  "reading_data",
+  "not_ok",
+  "ischecked",
+  "comentory",
+  "column_break_9",
+  "wtg_model1",
+  "check_point",
+  "wtg_check_point",
+  "wtg_check_point_code",
+  "ok",
+  "attributable_cause",
+  "severity",
+  "upload_image",
+  "turbine_image",
+  "section_break_19",
+  "tca_remedation_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "tca_activity",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "TCA Activity",
+   "options": "TCA Activity",
+   "reqd": 1,
+   "set_only_once": 1,
+   "width": "2"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wtg_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WTG Name",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Section Name",
+   "options": "TCA Section",
+   "set_only_once": 1,
+   "width": "1"
+  },
+  {
+   "fieldname": "subsection_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subsection Name",
+   "mandatory_depends_on": "{\n\t\"type\": \"select_one tca_subsection\",\n\t\"hint\": \"Can be short or long but always one line (type = text)\",\n\t\"appearance\": \"minimal\",\n\t\"choice_filter\": \"cf=${section_name}\",\n\t\"choice_filter_field\": \"tca_section\",\n\t\"link_default_filter\":\"{ 'wtg_model':'RD113'}\",\n\t\"relevant\": \"${age} > 18\",\n\t\"parameters\": \"start=0 end=17 step=1\",\n\t\"calculation\": \"${amount} * 0.18\"\n}",
+   "no_copy": 1,
+   "options": "TCA Subsection",
+   "set_only_once": 1,
+   "width": "1"
+  },
+  {
+   "fieldname": "reading_data",
+   "fieldtype": "Data",
+   "label": "Reading Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "not_ok",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Not OK",
+   "width": "1"
+  },
+  {
+   "fieldname": "upload_image",
+   "fieldtype": "Attach",
+   "label": "Upload Image"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "tca_activity.wtg_model",
+   "fieldname": "wtg_model1",
+   "fieldtype": "Link",
+   "label": "WTG Model",
+   "options": "WTG Model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "check_point",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Check Point",
+   "options": "TCA Check Point",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "check_point.wtg_check_point",
+   "fieldname": "wtg_check_point",
+   "fieldtype": "Read Only",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "WTG Check Point",
+   "width": "3"
+  },
+  {
+   "fieldname": "wtg_check_point_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "WTG Check Point Code",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ok",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "OK"
+  },
+  {
+   "depends_on": "not_ok",
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "\nCritical\nSevere\nModerate\nAcceptable"
+  },
+  {
+   "depends_on": "not_ok",
+   "fieldname": "attributable_cause",
+   "fieldtype": "Select",
+   "label": "Attributable cause",
+   "options": "\nWA\nPP\nMP\nDR"
+  },
+  {
+   "depends_on": "eval:in_list([\"WTG Tower Image\"],doc.wtg_check_point)",
+   "fieldname": "turbine_image",
+   "fieldtype": "Attach Image",
+   "label": "Turbine Image"
+  },
+  {
+   "depends_on": "not_ok",
+   "fieldname": "comentory",
+   "fieldtype": "Small Text",
+   "label": "Comentory"
+  },
+  {
+   "depends_on": "not_ok",
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tca_remedation_item",
+   "fieldtype": "Table",
+   "label": "TCA Remedation Item",
+   "options": "TCA Remedation Item Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "ischecked",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "isChecked",
+   "width": "1"
+  }
+ ],
+ "links": [],
+ "modified": "2020-06-06 10:55:00.730502",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "TCA Data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCA Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "TCA User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "TCA Operator",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TCA Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

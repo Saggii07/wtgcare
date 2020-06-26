@@ -1,0 +1,57 @@
+{
+ "autoname": "field:manufacturer_name",
+ "creation": "2019-12-02 11:52:18.956131",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "manufacturer_name",
+  "technology",
+  "m_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "manufacturer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Manufacturer Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "technology",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Technology"
+  },
+  {
+   "fieldname": "m_code",
+   "fieldtype": "Data",
+   "label": "Manufacturer Code"
+  }
+ ],
+ "modified": "2019-12-02 13:21:35.980106",
+ "modified_by": "Administrator",
+ "module": "WTG Core",
+ "name": "WTG Manufacturer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "technology",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "manufacturer_name",
+ "track_changes": 1
+}

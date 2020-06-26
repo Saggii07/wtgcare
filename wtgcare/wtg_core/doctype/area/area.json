@@ -1,0 +1,104 @@
+{
+ "autoname": "field:area_name",
+ "creation": "2019-12-02 11:11:21.005152",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "area_name",
+  "area_code",
+  "section_break_4",
+  "area_incharge",
+  "area_incharge_name",
+  "column_break_7",
+  "admin_incharge"
+ ],
+ "fields": [
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "area_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Area Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "area_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area Code"
+  },
+  {
+   "fieldname": "area_incharge",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Area Incharge (FAPO)",
+   "options": "Employee"
+  },
+  {
+   "default": "0",
+   "fetch_from": "area_incharge.employee_name",
+   "fieldname": "area_incharge_name",
+   "fieldtype": "Read Only",
+   "label": "Area Incharge Name"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_incharge",
+   "fieldtype": "Link",
+   "label": "Admin (Multi-Tasker)",
+   "options": "Employee"
+  }
+ ],
+ "modified": "2020-02-15 17:47:18.667821",
+ "modified_by": "Administrator",
+ "module": "WTG Core",
+ "name": "Area",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

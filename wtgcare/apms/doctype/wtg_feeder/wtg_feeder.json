@@ -1,0 +1,120 @@
+{
+ "autoname": "field:feeder_name",
+ "creation": "2019-12-02 13:14:28.444981",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feeder_name",
+  "substation",
+  "column_break_3",
+  "feeder_code",
+  "line_loss",
+  "site"
+ ],
+ "fields": [
+  {
+   "fieldname": "feeder_name",
+   "fieldtype": "Data",
+   "label": "Feeder Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "substation",
+   "fieldtype": "Link",
+   "label": "Substation",
+   "options": "USS"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feeder_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feeder Code"
+  },
+  {
+   "fieldname": "line_loss",
+   "fieldtype": "Data",
+   "label": "Line Loss"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Site"
+  }
+ ],
+ "modified": "2020-02-08 15:36:10.988675",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "WTG Feeder",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "APMS Operator"
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "APMS Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "feeder_name,feeder_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

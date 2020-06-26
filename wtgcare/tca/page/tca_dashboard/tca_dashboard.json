@@ -1,0 +1,32 @@
+{
+ "content": null,
+ "creation": "2020-01-20 09:53:50.264277",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-05-08 11:48:47.891187",
+ "modified_by": "Administrator",
+ "module": "TCA",
+ "name": "tca-dashboard",
+ "owner": "Administrator",
+ "page_name": "TCA Dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "TCA Admin"
+  },
+  {
+   "role": "TCA Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "TCA Dashboard"
+}

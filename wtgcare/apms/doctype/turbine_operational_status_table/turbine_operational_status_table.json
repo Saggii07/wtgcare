@@ -1,0 +1,53 @@
+{
+ "creation": "2019-12-02 14:15:34.294326",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wtg_stop",
+  "wtg_start",
+  "operational_hours",
+  "kwh"
+ ],
+ "fields": [
+  {
+   "fieldname": "wtg_stop",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "WTG Stop",
+   "width": "3"
+  },
+  {
+   "fieldname": "wtg_start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "WTG Start",
+   "width": "3"
+  },
+  {
+   "fieldname": "operational_hours",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Operational Hours",
+   "width": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "kwh",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "KWh"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-02 14:16:16.850685",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "Turbine Operational Status Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

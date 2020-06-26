@@ -1,0 +1,148 @@
+{
+ "autoname": "field:name1",
+ "creation": "2019-12-04 17:12:17.058786",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "analysis_type",
+  "site",
+  "created_by",
+  "upload_date",
+  "column_break_5",
+  "name1",
+  "site_name",
+  "created_by_name",
+  "analysis_report_file",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "analysis_type",
+   "fieldtype": "Select",
+   "label": "Analysis Type",
+   "options": "\nPower Curve Analysis\nBreakdown Analysis\nWarning Analysis"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "analysis_report_file",
+   "fieldtype": "Attach",
+   "label": "Analysis Report File"
+  },
+  {
+   "default": "now",
+   "fieldname": "upload_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Upload Date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "site.site_name",
+   "fieldname": "site_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Site Name"
+  },
+  {
+   "fetch_from": "created_by.employee_name",
+   "fieldname": "created_by_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Created By Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nClosed"
+  }
+ ],
+ "modified": "2020-02-19 15:59:20.720595",
+ "modified_by": "Administrator",
+ "module": "APMS",
+ "name": "APMS Report Submission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "APMS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "APMS User",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "APMS Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

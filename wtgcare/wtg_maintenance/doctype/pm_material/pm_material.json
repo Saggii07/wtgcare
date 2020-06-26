@@ -1,0 +1,83 @@
+{
+ "creation": "2020-01-29 14:41:51.440448",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pm_type_material",
+  "wtg_model",
+  "column_break_3",
+  "technology",
+  "section_break_6",
+  "material_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_type_material",
+   "fieldtype": "Link",
+   "label": "PM Type",
+   "options": "PM Type Master"
+  },
+  {
+   "fieldname": "technology",
+   "fieldtype": "Link",
+   "label": "Technology",
+   "options": "WTG Manufacturer"
+  },
+  {
+   "fieldname": "wtg_model",
+   "fieldtype": "Link",
+   "label": "WTG Model",
+   "options": "WTG Model"
+  },
+  {
+   "fieldname": "material_list",
+   "fieldtype": "Table",
+   "label": "Material List",
+   "options": "Material List Table"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2020-01-29 14:51:35.087926",
+ "modified_by": "Administrator",
+ "module": "WTG Maintenance",
+ "name": "PM Material",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
